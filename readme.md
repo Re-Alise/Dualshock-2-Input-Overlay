@@ -1,6 +1,7 @@
 # Dualshock 2 Input Overlay
 
-> insert demo video here
+https://user-images.githubusercontent.com/28112294/116925382-16a54800-ac94-11eb-88cc-4161dd47b48d.mp4
+> The video do not play here somehow, just download it or the file in the repo
 
 ## Precaution
 
