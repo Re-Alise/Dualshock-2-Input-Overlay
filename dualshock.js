@@ -5,7 +5,7 @@
 const readmeString = `Hello, fellow visitor,
 this is a dualshock 2 overlay that show realtime input of real console (additinal hardware required)
 
-Go check out my github repo for detail: TBD soon
+Go check out my github repo for detail: https://github.com/Re-Alise/Dualshock-2-Input-Overlay/
 
 ps. The svg image used here is modified from Dimensions.com
 `
@@ -13,23 +13,17 @@ ps. The svg image used here is modified from Dimensions.com
 // Colors for overlay
 const backgroundColorString = 'black'
 const backgroundColor = [0, 0, 0]
-// const backgroundColorString = 'rgb(244, 181, 0)'
-// const backgroundColor = [244, 181, 0]
+
 const positiveYellow = [252, 175, 22]
 const positiveYellowString = 'rgba(252, 175, 22, 1)'
 
 const defaultColor = [255, 255, 255]
 const defaultColorString = 'white'
-// const defaultColor = [0, 0, 0, 0.2]
-// const defaultColorString = 'rgba(0, 0, 0, 0.2)'
 
 const highlightColor = positiveYellow
 const highlightColorString = positiveYellowString
-// const highlightColor = [0, 0, 0]
-// const highlightColorString = 'black'
 
 const disabledColor = 'rgba(255, 255, 255, 0.1)'
-// const disabledColor = 'rgba(0, 0, 0, 0.2)'
 
 // blend two colors in an unnecessarily complex way
 function blendColor (color1, color2, f, stringify = false) {
