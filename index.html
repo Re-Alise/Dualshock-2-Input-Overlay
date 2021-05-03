@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="dualshock.js"></script>
+    <title>Dualshock 2 Overlay</title>
+</head>
+
+<body onload="init()">
+    <object id="dualshock" data="svgs/dualshock_white_no_symbols.svg" type="image/svg+xml"></object>
+    <div id='svg-controls'>
+        <div id='ble-buttons'>
+            <button onclick="connectBle()">BLE</button>
+            <button onclick="stopBleNotification()">BLE Stop</button>
+        </div>
+        <div id='serial-buttons'>
+            <button onclick="connectSerial()">Serial</button>
+            <button onclick="stopSerial()">Serial Stop</button>
+        </div>
+        <p id="status">Status: some text here OwO</p>
+    </div>
+</body>
+
+</html>
