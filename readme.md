@@ -1,7 +1,9 @@
 # Dualshock 2 Input Overlay
 
+> Demo video
+
 https://user-images.githubusercontent.com/28112294/116925382-16a54800-ac94-11eb-88cc-4161dd47b48d.mp4
-> The video do not play here somehow, just download it or the file in the repo
+> The video do not play here somehow, just download [it](https://user-images.githubusercontent.com/28112294/116925382-16a54800-ac94-11eb-88cc-4161dd47b48d.mp4) or the [file in the repo](https://github.com/Re-Alise/Dualshock-2-Input-Overlay/blob/main/ds2-demo-gt4.mp4)
 
 ## Precaution
 
@@ -15,7 +17,7 @@ https://user-images.githubusercontent.com/28112294/116925382-16a54800-ac94-11eb-
 
 - The overlay work fine to me, but you might have to modified the code to fit your need.
 
-- Read carefully and take your own risk if you decide to proceed, I don't take responsibility for anything you did, included but not limited to:
+- Read carefully and take your own risk if you decide to proceed, I don't take responsibility for anything you did, including but not limited to:
   - Burn yourself
   - Fry your PS2
   - Regret no to see Q&A first
