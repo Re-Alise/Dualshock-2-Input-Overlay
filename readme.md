@@ -2,8 +2,8 @@
 
 > Demo video
 
-https://user-images.githubusercontent.com/28112294/116925382-16a54800-ac94-11eb-88cc-4161dd47b48d.mp4
-> The video do not play here somehow, just download [it](https://user-images.githubusercontent.com/28112294/116925382-16a54800-ac94-11eb-88cc-4161dd47b48d.mp4) or the [file in the repo](https://github.com/Re-Alise/Dualshock-2-Input-Overlay/blob/main/ds2-demo-gt4.mp4)
+https://user-images.githubusercontent.com/28112294/117185353-b4c01c00-ae14-11eb-9f93-a3fda3b24fbd.mp4
+> For higher quality version, check out [this video in the repo](https://github.com/Re-Alise/Dualshock-2-Input-Overlay/blob/main/ds2-demo-gt4.mp4)
 
 ## Precaution
 
@@ -36,27 +36,46 @@ A realtime input overlay that capture and show the input from the dualshock 2 co
 - Auto detect and display dualshock 2's three modes: digital, analog and analog w/ button pressure
 - Idk but it I think it's cool to use on stream
 
+## How to use it
+
+There are roughly three steps to make it work:
+
+1. Flash program `ds2_overlay.hex` into your blue pill
+1. Build a connector and wire things up
+1. Put the connector you made between PS2 and controller, open `index.html` or `index-alt.html` then connect to your blue pill
+
+If every components is prepared, it would take you 1 to 3 hours depends on your soldering skill and setup, plus one day to let the glue in your connecter dried up. But after that, you only need to do `step 3` each time you want to use it (which take less than a minute, if you left the connector on you PS2).
+
 ## How it work
 
 ![Signal captured in digital mode](/images/dsview-digital.png)
 
 As [this awesome article](https://store.curiousinventor.com/guides/PS2/) shows that everything tranferred between PS2 and a is using a standard [SPI](https://en.wikipedia.org/wiki/Serial_Peripheral_Interface) protocol, 60 times per second.
 
-So I capture the data using `STM32F103C8T6 aka blue pill` and send to PC to show the result on web page.
+So I built a program that capture the data using `STM32F103C8T6 aka blue pill`, then made a web page to display the result.
 
-For anyone want to see the actual signal, I put some examples in `singal records` folder, you could open them with [DSView](https://www.dreamsourcelab.com/download/)
+> For anyone want to see the actual signal, I put some examples in `singal records` folder, you could open them with [DSView](https://www.dreamsourcelab.com/download/)
 
 ## What you need
 
+- Soldering tools and some thin wires  
+  Cheapest one should do the job, but try solder some wires before do anything here if it's your first time to do so
+  
+- A test board or perfboard  
+  Just make thing easier and organized, I don't like to see wires bridged in mid-air
+
 - A way to connect to a attach wires on MISO/SCK/CS/GND/~~3.3V~~ line of your controller when PS2 is running  
   If you conveniently have a broken dualshock controller and a cheap dualshock to usb adapter, you can build a bypass connector like this:
-  ![](/images/bypass-connector-alpha.png)
+  ![An ugly bypass connector w/ schematic](/images/bypass-connector-alpha.png)
 
-- STM32F103C8T6 (blue pill) x 1  
+- A STM32F103C8T6 (blue pill)  
   Could be other stm32 devices if you compile it from code
 
 - A USB to TTL adapter or ~~ST-Link if you already have one~~  
   Just to flash program to blue pill 
+  
+- A micro USB cable that can transfer data (in other words, not a charge-only cable)  
+  If you choose to use the overlay with USB serial connection (recommended)
 
 - A bluetooth 4.0/5.0 LE module (optional, not recommended)
   HM-10 is OK-ish if you don't care the laggy result, but use better one if possible  
